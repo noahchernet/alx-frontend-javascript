@@ -1,4 +1,4 @@
-import { uploadPhoto, createUser } from '../util';
+import { uploadPhoto, createUser } from './util';
 
 export default function handleProfileSignup() {
   let returnedStr = '';
