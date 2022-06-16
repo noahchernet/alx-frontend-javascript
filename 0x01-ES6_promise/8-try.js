@@ -5,6 +5,6 @@ export default function divideFunction(numerator, denominator) {
     }
     return numerator / denominator;
   } catch (e) {
-    return e.message;
+    return e;
   }
 }
