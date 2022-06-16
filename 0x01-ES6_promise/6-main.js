@@ -1,3 +1,8 @@
 import handleProfileSignup from './6-final-user';
 
-console.log(handleProfileSignup('Bob', 'Dylan', 'bob_dylan.jpg'));
+const main = async () => {
+  const qeue = await handleProfileSignup('Bob', 'Dylan', 'bob_dylan.jpg');
+  console.log(qeue);
+};
+
+main();
