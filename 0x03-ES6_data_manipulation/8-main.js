@@ -6,3 +6,14 @@ console.log(
 console.log(
   cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), '')
 );
+
+console.log(
+  cleanSet(
+    new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']),
+    undefined
+  )
+);
+
+console.log(
+  cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), null)
+);
