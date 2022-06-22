@@ -34,3 +34,21 @@ const printTeacher = (firstName: string, lastName: string): string => {
 };
 
 console.log(printTeacher(teacher1.firstName, teacher1.lastName));
+
+class StudentClass {
+  firstName: string;
+  lastName: string;
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  workOnHomework(): string {
+    return 'Currently working';
+  }
+
+  displayName(): string {
+    return this.firstName;
+  }
+}
