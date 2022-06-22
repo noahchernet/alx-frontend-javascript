@@ -6,7 +6,7 @@ interface Teacher {
   location: string;
 }
 
-const teacher3: Teacher = {
+const teacher1: Teacher = {
   firstName: 'John',
   fullTimeEmployee: false,
   lastName: 'Doe',
@@ -14,7 +14,7 @@ const teacher3: Teacher = {
   // [key: string]: any,
 };
 
-console.log(teacher3);
+console.log(teacher1);
 
 interface Directors extends Teacher {
   numberOfReports: number;
@@ -28,3 +28,9 @@ const director1: Directors = {
   numberOfReports: 17,
 };
 console.log(director1);
+
+const printTeacher = (firstName: string, lastName: string): string => {
+  return firstName.slice(0, 1) + '. ' + lastName;
+};
+
+console.log(printTeacher(teacher1.firstName, teacher1.lastName));
