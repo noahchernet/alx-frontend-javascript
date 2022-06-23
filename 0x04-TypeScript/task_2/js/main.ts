@@ -36,7 +36,7 @@ class Teacher implements TeacherInterface {
   }
 }
 
-const createEmployee = (salary: any) => {
+const createEmployee = (salary: any): Teacher | Director => {
   return typeof salary === 'number' && salary < 500
     ? new Teacher()
     : new Director();
@@ -47,3 +47,18 @@ console.log(createEmployee(200)); // Teacher;
 console.log(createEmployee(1000)); // Director
 
 console.log(createEmployee('$500')); // Director
+
+const isDirector = (employee: any): boolean => {
+  return employee.constructor.name === 'Director' ? true : false;
+};
+const executeWork = (employee: any): string => {
+  console.log(employee);
+  return employee.constructor.name === 'Director'
+    ? employee.workDirectorTasks()
+    : employee.workTeacherTasks();
+};
+
+console.log(executeWork(createEmployee(200)));
+// Getting to work
+console.log(executeWork(createEmployee(1000)));
+// Getting to director tasks
