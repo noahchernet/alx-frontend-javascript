@@ -62,3 +62,13 @@ console.log(executeWork(createEmployee(200)));
 // Getting to work
 console.log(executeWork(createEmployee(1000)));
 // Getting to director tasks
+
+type Subjects = 'Math' | 'History';
+
+const teachClass = (todayClass: Subjects) =>
+  todayClass === 'Math' ? 'Teaching Math' : 'Teaching History';
+
+console.log(teachClass('Math'));
+// Teaching Math
+console.log(teachClass('History'));
+// Teaching History
